@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>MooUpload Demo</title>
+	<script type="text/javascript" src="Mootools.Core.js"></script>
+	<script type="text/javascript" src="../Source/MooUpload.js"></script>
+	<link rel="stylesheet" href="demo.css" media="screen" />
+</head>
+<body>
+	<h1>MooUpload Demo</h1>
+	<div id="container">
+<!-- Example 1 -->
+		<div class="block">
+			<h2>Example 1</h2>
+			<p>The simpliest use of MooUpload</p>
+			<button id="example1">Upload a file</button>
+			<script>
+				new MooUpload({
+					buttonSubmit: 'example1',
+					target: 'target.php'
+				});
+			</script>
+		</div>
+	</div>
+</body>
+</html>
