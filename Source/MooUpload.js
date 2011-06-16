@@ -65,7 +65,7 @@ var MooUpload = new Class({
 		this.index = 0;
 		
 		var target = (this.options.inject && this.options.inject.target) || this.buttonSubmit;
-		var where = (this.options.inject ? this.options.inject.where : '') || target == document.body ? 'inside' : 'after';
+		var where = (this.options.inject ? this.options.inject.where : '') || (target == document.body ? 'inside' : 'after');
 		
 		// Create the file input
 		this.input = new Element('input[type=file]', {
