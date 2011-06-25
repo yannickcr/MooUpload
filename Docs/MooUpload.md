@@ -44,7 +44,7 @@ MooUpload Method: constructor {#MooUpload:constructor}
 * onUploadError (function) Callback to execute if an upload error occure; passed the error event.
 * onUploadFinish (function) Callback to execute at the end of the file upload; passed the load event.
 * onRequestFinish (function) Callback to execute at the end of the request; passed the readystatechange event.
-* onUploadQueueFinish (function) Callback to execute at the end of the queue.
+* onUploadQueueFinish (function) Callback to execute at the end of the queue; passed the readystatechange event.
 
 ### Example:
 

@@ -36,7 +36,7 @@ var MooUpload = new Class({
 		onUploadError: function(event){},
 		onUploadFinish: function(event){},
 		onRequestFinish: function(event){},
-		onUploadQueueFinish: function(){},
+		onUploadQueueFinish: function(event){},
 		inject: {							// Place to put the upload input
 			target: element,
 			where: 'after',
@@ -130,7 +130,7 @@ var MooUpload = new Class({
 			// End of the file list
 			this.files = {};
 			this.index = 0;
-			this.fireEvent('onUploadQueueFinish');
+			this.fireEvent('onUploadQueueFinish', e);
 			
 		}.bind(this), false);
 	},
