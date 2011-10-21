@@ -179,14 +179,20 @@ var MooUpload = new Class({
 	 * Send a file
 	 */
 	_sendFile: function(key){
-		var formdata = new FormData(),
-			data = this.options.data.apply(this, [this.files[key]]);
-		Object.each(data, function(value, key){
-			formdata.append(key, value);
-		}.bind(this));
+		this.formdata = new FormData();
+		this._appendData(this.options.data.apply(this, [this.files[key]]));
 		this.request.open('POST', this.options.target);
 		this.fireEvent('onRequestStart');
-		this.request.send(formdata);
+		this.request.send(this.formdata);
+		delete this.formdata;
+	},
+	
+	_appendData: function(data, parent){
+		Object.each(data, function(value, key){
+			if (parent) key = parent + '[' + key + ']';
+			if (typeOf(value) == 'object' && !instanceOf(value, File)) this._appendData(value, key);
+			else this.formdata.append(key, value);
+		}.bind(this));
 	}
 	
 });
