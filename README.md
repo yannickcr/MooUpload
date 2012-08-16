@@ -42,7 +42,7 @@ JavaScript:
 		accept: 'image/*',				// Accepted filetypes
 	});
 
-For more informations please read the [Documentation](https://github.com/Country/MooUpload/blob/master/Docs/MooUpload.md)
+For more informations please read the [Documentation](https://github.com/yannickcr/MooUpload/blob/master/Docs/MooUpload.md)
 
 ### Notes
 
